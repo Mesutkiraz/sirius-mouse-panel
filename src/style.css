@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ================================================================
+   HK Gaming Sirius-M — Esports Control Center Theme
+   Clean, sleek, native-feeling gaming utility styling
+   ================================================================ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #0b0c10;
+  color: #f1f5f9;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(59, 130, 246, 0.08), transparent 70%),
+    radial-gradient(circle at 100% 100%, rgba(99, 102, 241, 0.03), transparent 40%);
+  background-attachment: fixed;
+}
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---- Sleek Custom Scrollbar ---- */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f1118;
+}
+::-webkit-scrollbar-thumb {
+  background: #232838;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #333a50;
+}
+
+/* ---- Component Utility Panels ---- */
+.hk-panel {
+  background-color: #12141c;
+  border: 1px solid #232838;
+  border-radius: 0.875rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hk-panel-card {
+  background-color: #161924;
+  border: 1px solid #232838;
+  border-radius: 0.75rem;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+.hk-panel-card:hover {
+  border-color: #333a50;
+}
+
+/* ---- Transitions ---- */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: translateY(3px);
+}
+
+/* ---- Log Console ---- */
+.log-area {
+  font-family: 'JetBrains Mono', Consolas, monospace;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  max-height: 220px;
+  overflow-y: auto;
+}
